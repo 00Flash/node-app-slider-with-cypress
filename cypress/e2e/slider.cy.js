@@ -16,3 +16,18 @@ describe('Swiper Gallery Test', function () {
     cy.get('.swiper-slide-active').should('contain', 'Paris');
   });
 });
+
+describe('Swiper Gallery Test', function () {
+  it('Checks if user can use navigation buttons', function () {
+    cy.visit('http://localhost:3000');
+    cy.get('.swiper-button-next')
+    .should('be.visible')
+    .and('not.be.disabled')
+    .click();
+    cy.get('.swiper-button-prev')
+    .should('be.visible')
+    .and('not.be.disabled')
+    .click();
+    
+  });
+});
